@@ -1,0 +1,29 @@
+{
+  "majority_negative": {
+    "acc": 0.247,
+    "macro_f1": 0.0032,
+    "pos_macro_f1": 0.0
+  },
+  "similarity_only": {
+    "acc": 0.4251,
+    "macro_f1": 0.4177,
+    "pos_macro_f1": 0.4658,
+    "top5": 0.6721
+  },
+  "rules_only": {
+    "acc": 0.251,
+    "macro_f1": 0.0106,
+    "pos_macro_f1": 0.0078
+  },
+  "note": "ICV gold 247 rows, 122 active classes incl negative; metrics match paper protocol",
+  "_provenance": {
+    "train_file": "(training-free)",
+    "train_rows": 0,
+    "train_sha256_16": "n/a",
+    "test_file": "code/data/icv_test_gold.csv",
+    "test_rows": 247,
+    "test_sha256_16": "12c984c8b33224e5",
+    "weaklabel_params": "n/a",
+    "leakage_audit": "0 overlap (gold texts removed from pool before weak-labeling)"
+  }
+}

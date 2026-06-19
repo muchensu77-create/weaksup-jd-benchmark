@@ -1,0 +1,349 @@
+{
+  "domain": "icv",
+  "methods": [
+    "rf_probability",
+    "hybrid_or",
+    "neurosymbolic",
+    "bert_finetune"
+  ],
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "train": "code/data/icv_train_relaxed_clean.csv",
+  "test": "code/data/icv_test_gold.csv",
+  "epochs": 5,
+  "prototype_csv": "F:\\Desktop\\岗位建模论文\\gz_clean_retrain\\jd.csv",
+  "rules_json": "F:\\Desktop\\岗位建模论文\\gz_clean_retrain\\code\\rules.json",
+  "per_run": {
+    "rf_probability": {
+      "42": {
+        "accuracy": 0.2713,
+        "macro_f1": 0.2153,
+        "positive_macro_f1": 0.2476,
+        "negative_f1": 0.0,
+        "top5_accuracy": 0.4939,
+        "method": "rf_probability",
+        "checkpoint": "model_rf_probability_seed42_lam0.1_gold_icv_rf_probability_s42.pt",
+        "n_samples": 247
+      },
+      "123": {
+        "accuracy": 0.2915,
+        "macro_f1": 0.2223,
+        "positive_macro_f1": 0.2567,
+        "negative_f1": 0.0323,
+        "top5_accuracy": 0.502,
+        "method": "rf_probability",
+        "checkpoint": "model_rf_probability_seed123_lam0.1_gold_icv_rf_probability_s123.pt",
+        "n_samples": 247
+      },
+      "456": {
+        "accuracy": 0.2915,
+        "macro_f1": 0.2492,
+        "positive_macro_f1": 0.2759,
+        "negative_f1": 0.0323,
+        "top5_accuracy": 0.5263,
+        "method": "rf_probability",
+        "checkpoint": "model_rf_probability_seed456_lam0.1_gold_icv_rf_probability_s456.pt",
+        "n_samples": 247
+      }
+    },
+    "hybrid_or": {
+      "42": {
+        "accuracy": 0.2753,
+        "macro_f1": 0.2278,
+        "positive_macro_f1": 0.2613,
+        "negative_f1": 0.0,
+        "top5_accuracy": 0.502,
+        "method": "hybrid_or",
+        "checkpoint": "model_hybrid_or_seed42_lam0.1_gold_icv_hybrid_or_s42.pt",
+        "n_samples": 247
+      },
+      "123": {
+        "accuracy": 0.2915,
+        "macro_f1": 0.2305,
+        "positive_macro_f1": 0.2591,
+        "negative_f1": 0.0312,
+        "top5_accuracy": 0.4939,
+        "method": "hybrid_or",
+        "checkpoint": "model_hybrid_or_seed123_lam0.1_gold_icv_hybrid_or_s123.pt",
+        "n_samples": 247
+      },
+      "456": {
+        "accuracy": 0.2834,
+        "macro_f1": 0.2392,
+        "positive_macro_f1": 0.2715,
+        "negative_f1": 0.0,
+        "top5_accuracy": 0.5304,
+        "method": "hybrid_or",
+        "checkpoint": "model_hybrid_or_seed456_lam0.1_gold_icv_hybrid_or_s456.pt",
+        "n_samples": 247
+      }
+    },
+    "neurosymbolic": {
+      "42": {
+        "accuracy": 0.2794,
+        "macro_f1": 0.23,
+        "positive_macro_f1": 0.2615,
+        "negative_f1": 0.0,
+        "top5_accuracy": 0.4777,
+        "method": "neurosymbolic",
+        "checkpoint": "model_neurosymbolic_seed42_lam0.1_gold_icv_neurosymbolic_s42.pt",
+        "n_samples": 247
+      },
+      "123": {
+        "accuracy": 0.2713,
+        "macro_f1": 0.2255,
+        "positive_macro_f1": 0.2472,
+        "negative_f1": 0.0323,
+        "top5_accuracy": 0.4777,
+        "method": "neurosymbolic",
+        "checkpoint": "model_neurosymbolic_seed123_lam0.1_gold_icv_neurosymbolic_s123.pt",
+        "n_samples": 247
+      },
+      "456": {
+        "accuracy": 0.2753,
+        "macro_f1": 0.2186,
+        "positive_macro_f1": 0.2451,
+        "negative_f1": 0.0323,
+        "top5_accuracy": 0.5101,
+        "method": "neurosymbolic",
+        "checkpoint": "model_neurosymbolic_seed456_lam0.1_gold_icv_neurosymbolic_s456.pt",
+        "n_samples": 247
+      }
+    },
+    "bert_finetune": {
+      "42": {
+        "accuracy": 0.2794,
+        "macro_f1": 0.234,
+        "positive_macro_f1": 0.2673,
+        "negative_f1": 0.0,
+        "top5_accuracy": 0.502,
+        "method": "bert_finetune",
+        "checkpoint": "model_bert_finetune_seed42_lam0.1_gold_icv_bert_finetune_s42.pt",
+        "n_samples": 247
+      },
+      "123": {
+        "accuracy": 0.2874,
+        "macro_f1": 0.2409,
+        "positive_macro_f1": 0.2689,
+        "negative_f1": 0.0,
+        "top5_accuracy": 0.4777,
+        "method": "bert_finetune",
+        "checkpoint": "model_bert_finetune_seed123_lam0.1_gold_icv_bert_finetune_s123.pt",
+        "n_samples": 247
+      },
+      "456": {
+        "accuracy": 0.2794,
+        "macro_f1": 0.2242,
+        "positive_macro_f1": 0.255,
+        "negative_f1": 0.0,
+        "top5_accuracy": 0.5425,
+        "method": "bert_finetune",
+        "checkpoint": "model_bert_finetune_seed456_lam0.1_gold_icv_bert_finetune_s456.pt",
+        "n_samples": 247
+      }
+    }
+  },
+  "aggregated": {
+    "rf_probability": {
+      "accuracy": {
+        "mean": 0.2848,
+        "std": 0.0095,
+        "values": [
+          0.2713,
+          0.2915,
+          0.2915
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.2289,
+        "std": 0.0146,
+        "values": [
+          0.2153,
+          0.2223,
+          0.2492
+        ]
+      },
+      "positive_macro_f1": {
+        "mean": 0.2601,
+        "std": 0.0118,
+        "values": [
+          0.2476,
+          0.2567,
+          0.2759
+        ]
+      },
+      "negative_f1": {
+        "mean": 0.0215,
+        "std": 0.0152,
+        "values": [
+          0.0,
+          0.0323,
+          0.0323
+        ]
+      },
+      "top5_accuracy": {
+        "mean": 0.5074,
+        "std": 0.0138,
+        "values": [
+          0.4939,
+          0.502,
+          0.5263
+        ]
+      }
+    },
+    "hybrid_or": {
+      "accuracy": {
+        "mean": 0.2834,
+        "std": 0.0066,
+        "values": [
+          0.2753,
+          0.2915,
+          0.2834
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.2325,
+        "std": 0.0049,
+        "values": [
+          0.2278,
+          0.2305,
+          0.2392
+        ]
+      },
+      "positive_macro_f1": {
+        "mean": 0.264,
+        "std": 0.0054,
+        "values": [
+          0.2613,
+          0.2591,
+          0.2715
+        ]
+      },
+      "negative_f1": {
+        "mean": 0.0104,
+        "std": 0.0147,
+        "values": [
+          0.0,
+          0.0312,
+          0.0
+        ]
+      },
+      "top5_accuracy": {
+        "mean": 0.5088,
+        "std": 0.0157,
+        "values": [
+          0.502,
+          0.4939,
+          0.5304
+        ]
+      }
+    },
+    "neurosymbolic": {
+      "accuracy": {
+        "mean": 0.2753,
+        "std": 0.0033,
+        "values": [
+          0.2794,
+          0.2713,
+          0.2753
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.2247,
+        "std": 0.0047,
+        "values": [
+          0.23,
+          0.2255,
+          0.2186
+        ]
+      },
+      "positive_macro_f1": {
+        "mean": 0.2513,
+        "std": 0.0073,
+        "values": [
+          0.2615,
+          0.2472,
+          0.2451
+        ]
+      },
+      "negative_f1": {
+        "mean": 0.0215,
+        "std": 0.0152,
+        "values": [
+          0.0,
+          0.0323,
+          0.0323
+        ]
+      },
+      "top5_accuracy": {
+        "mean": 0.4885,
+        "std": 0.0153,
+        "values": [
+          0.4777,
+          0.4777,
+          0.5101
+        ]
+      }
+    },
+    "bert_finetune": {
+      "accuracy": {
+        "mean": 0.2821,
+        "std": 0.0038,
+        "values": [
+          0.2794,
+          0.2874,
+          0.2794
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.233,
+        "std": 0.0069,
+        "values": [
+          0.234,
+          0.2409,
+          0.2242
+        ]
+      },
+      "positive_macro_f1": {
+        "mean": 0.2637,
+        "std": 0.0062,
+        "values": [
+          0.2673,
+          0.2689,
+          0.255
+        ]
+      },
+      "negative_f1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "top5_accuracy": {
+        "mean": 0.5074,
+        "std": 0.0267,
+        "values": [
+          0.502,
+          0.4777,
+          0.5425
+        ]
+      }
+    }
+  },
+  "_provenance": {
+    "train_file": "code/data/icv_train_relaxed_clean.csv",
+    "train_rows": 8291,
+    "train_sha256_16": "fa0c828a39a1a81d",
+    "test_file": "code/data/icv_test_gold.csv",
+    "test_rows": 247,
+    "test_sha256_16": "12c984c8b33224e5",
+    "weaklabel_params": "relaxed tau0.60/delta0.02",
+    "leakage_audit": "0 overlap (gold texts removed from pool before weak-labeling)"
+  }
+}

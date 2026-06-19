@@ -1,0 +1,116 @@
+{
+  "positive_rules": [
+    {
+      "name": "iso26262_functional_safety",
+      "keywords": ["ISO 26262", "iso26262", "功能安全"],
+      "target_positionName": ["功能安全工程师", "汽车功能安全工程师", "ADAS功能安全"],
+      "description": "ISO 26262 mentions map to functional safety engineer prototypes"
+    },
+    {
+      "name": "autosar_software",
+      "keywords": ["AUTOSAR", "autosar", "Autosar"],
+      "target_positionName": ["AUTOSAR软件工程师", "嵌入式软件工程师", "汽车电子软件工程师"],
+      "description": "AUTOSAR mentions map to automotive software engineer prototypes"
+    },
+    {
+      "name": "adas_perception",
+      "keywords": ["ADAS感知", "自动驾驶感知", "目标检测", "点云处理"],
+      "target_positionName": ["感知算法工程师", "ADAS算法工程师", "自动驾驶感知工程师"],
+      "description": "ADAS perception keywords map to perception engineer"
+    },
+    {
+      "name": "lidar_slam",
+      "keywords": ["SLAM", "激光雷达建图", "LOAM", "Cartographer"],
+      "target_positionName": ["SLAM算法工程师", "定位算法工程师"],
+      "description": "SLAM/LiDAR keywords map to SLAM engineer"
+    },
+    {
+      "name": "v2x_communication",
+      "keywords": ["V2X", "车路协同", "C-V2X", "DSRC"],
+      "target_positionName": ["V2X工程师", "车联网工程师", "通信工程师"],
+      "description": "V2X keywords map to V2X/connectivity engineer"
+    },
+    {
+      "name": "hil_testing",
+      "keywords": ["HIL测试", "硬件在环", "dSPACE", "CANoe"],
+      "target_positionName": ["HIL测试工程师", "汽车测试工程师", "验证测试工程师"],
+      "description": "HIL testing keywords map to test engineer"
+    },
+    {
+      "name": "battery_management",
+      "keywords": ["BMS", "电池管理系统", "SOC估算", "电芯"],
+      "target_positionName": ["BMS工程师", "电池系统工程师", "新能源工程师"],
+      "description": "BMS keywords map to battery engineer"
+    },
+    {
+      "name": "motor_control",
+      "keywords": ["电机控制", "MCU", "FOC算法", "永磁同步"],
+      "target_positionName": ["电机控制工程师", "电驱动工程师"],
+      "description": "Motor control keywords map to motor engineer"
+    },
+    {
+      "name": "chassis_control",
+      "keywords": ["底盘控制", "ESP", "EPS", "制动系统", "线控底盘"],
+      "target_positionName": ["底盘控制工程师", "底盘系统工程师"],
+      "description": "Chassis control keywords map to chassis engineer"
+    },
+    {
+      "name": "ros_robotics",
+      "keywords": ["ROS2", "机器人操作系统", "Nav2", "MoveIt"],
+      "target_positionName": ["机器人工程师", "ROS开发工程师"],
+      "description": "ROS2/robotics keywords map to robotics engineer"
+    }
+  ],
+  "reject_rules": [
+    {
+      "name": "reject_ccar_lae",
+      "keywords": ["CCAR", "适航", "CAAC", "民航维修", "航线维护"],
+      "description": "CCAR/civil aviation maintenance -> reject (LAE domain, not ICV)"
+    },
+    {
+      "name": "reject_pure_finance",
+      "keywords": ["基金从业", "证券从业", "CPA注册会计", "审计准则"],
+      "description": "Pure finance/accounting certifications -> reject"
+    },
+    {
+      "name": "reject_pure_medical",
+      "keywords": ["执业医师", "护士资格", "临床诊断", "药剂师"],
+      "description": "Pure medical/pharmaceutical -> reject"
+    },
+    {
+      "name": "reject_civil_construction",
+      "keywords": ["一级建造师", "二级建造师", "混凝土施工", "脚手架"],
+      "description": "Civil construction -> reject"
+    },
+    {
+      "name": "reject_real_estate",
+      "keywords": ["房产经纪", "楼盘销售", "二手房", "租赁顾问"],
+      "description": "Real estate agent -> reject"
+    },
+    {
+      "name": "reject_education_teacher",
+      "keywords": ["教师资格证", "幼儿园教师", "小学语文", "中学数学"],
+      "description": "K-12 teacher -> reject"
+    },
+    {
+      "name": "reject_food_service",
+      "keywords": ["厨师长", "面点师", "餐饮服务", "后厨"],
+      "description": "Food service / chef -> reject"
+    },
+    {
+      "name": "reject_textile",
+      "keywords": ["纺织工程", "织布", "印染", "缝纫"],
+      "description": "Textile / garment manufacturing -> reject"
+    },
+    {
+      "name": "reject_agriculture",
+      "keywords": ["农艺师", "畜牧", "种植技术", "饲料配方"],
+      "description": "Agriculture / animal husbandry -> reject"
+    },
+    {
+      "name": "reject_mining",
+      "keywords": ["采矿工程", "矿山安全", "选矿", "井下作业"],
+      "description": "Mining -> reject"
+    }
+  ]
+}

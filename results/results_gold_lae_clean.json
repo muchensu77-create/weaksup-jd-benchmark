@@ -1,0 +1,349 @@
+{
+  "domain": "lae",
+  "methods": [
+    "rf_probability",
+    "hybrid_or",
+    "neurosymbolic",
+    "bert_finetune"
+  ],
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "train": "code/data/lae_train_clean.csv",
+  "test": "code/data/lae_test_gold.csv",
+  "epochs": 5,
+  "prototype_csv": "F:\\Desktop\\岗位建模论文\\gz_clean_retrain/code/data/lae_prototypes.csv",
+  "rules_json": "F:\\Desktop\\岗位建模论文\\gz_clean_retrain/code/data/lae_rules.json",
+  "per_run": {
+    "rf_probability": {
+      "42": {
+        "accuracy": 0.0333,
+        "macro_f1": 0.0021,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.2222,
+        "top5_accuracy": 0.15,
+        "method": "rf_probability",
+        "checkpoint": "model_rf_probability_seed42_lam0.1_gold_lae_rf_probability_s42.pt",
+        "n_samples": 120
+      },
+      "123": {
+        "accuracy": 0.0417,
+        "macro_f1": 0.0026,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.2778,
+        "top5_accuracy": 0.2167,
+        "method": "rf_probability",
+        "checkpoint": "model_rf_probability_seed123_lam0.1_gold_lae_rf_probability_s123.pt",
+        "n_samples": 120
+      },
+      "456": {
+        "accuracy": 0.0167,
+        "macro_f1": 0.0011,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.1143,
+        "top5_accuracy": 0.1667,
+        "method": "rf_probability",
+        "checkpoint": "model_rf_probability_seed456_lam0.1_gold_lae_rf_probability_s456.pt",
+        "n_samples": 120
+      }
+    },
+    "hybrid_or": {
+      "42": {
+        "accuracy": 0.0333,
+        "macro_f1": 0.0021,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.2222,
+        "top5_accuracy": 0.1917,
+        "method": "hybrid_or",
+        "checkpoint": "model_hybrid_or_seed42_lam0.1_gold_lae_hybrid_or_s42.pt",
+        "n_samples": 120
+      },
+      "123": {
+        "accuracy": 0.0583,
+        "macro_f1": 0.0032,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.35,
+        "top5_accuracy": 0.1833,
+        "method": "hybrid_or",
+        "checkpoint": "model_hybrid_or_seed123_lam0.1_gold_lae_hybrid_or_s123.pt",
+        "n_samples": 120
+      },
+      "456": {
+        "accuracy": 0.0333,
+        "macro_f1": 0.002,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.2105,
+        "top5_accuracy": 0.15,
+        "method": "hybrid_or",
+        "checkpoint": "model_hybrid_or_seed456_lam0.1_gold_lae_hybrid_or_s456.pt",
+        "n_samples": 120
+      }
+    },
+    "neurosymbolic": {
+      "42": {
+        "accuracy": 0.0417,
+        "macro_f1": 0.0025,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.2703,
+        "top5_accuracy": 0.1917,
+        "method": "neurosymbolic",
+        "checkpoint": "model_neurosymbolic_seed42_lam0.1_gold_lae_neurosymbolic_s42.pt",
+        "n_samples": 120
+      },
+      "123": {
+        "accuracy": 0.0667,
+        "macro_f1": 0.0038,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.4,
+        "top5_accuracy": 0.2083,
+        "method": "neurosymbolic",
+        "checkpoint": "model_neurosymbolic_seed123_lam0.1_gold_lae_neurosymbolic_s123.pt",
+        "n_samples": 120
+      },
+      "456": {
+        "accuracy": 0.0583,
+        "macro_f1": 0.0033,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.3415,
+        "top5_accuracy": 0.1583,
+        "method": "neurosymbolic",
+        "checkpoint": "model_neurosymbolic_seed456_lam0.1_gold_lae_neurosymbolic_s456.pt",
+        "n_samples": 120
+      }
+    },
+    "bert_finetune": {
+      "42": {
+        "accuracy": 0.0333,
+        "macro_f1": 0.0021,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.2222,
+        "top5_accuracy": 0.15,
+        "method": "bert_finetune",
+        "checkpoint": "model_bert_finetune_seed42_lam0.1_gold_lae_bert_finetune_s42.pt",
+        "n_samples": 120
+      },
+      "123": {
+        "accuracy": 0.05,
+        "macro_f1": 0.0029,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.3158,
+        "top5_accuracy": 0.2,
+        "method": "bert_finetune",
+        "checkpoint": "model_bert_finetune_seed123_lam0.1_gold_lae_bert_finetune_s123.pt",
+        "n_samples": 120
+      },
+      "456": {
+        "accuracy": 0.0417,
+        "macro_f1": 0.0024,
+        "positive_macro_f1": 0.0,
+        "negative_f1": 0.2564,
+        "top5_accuracy": 0.1417,
+        "method": "bert_finetune",
+        "checkpoint": "model_bert_finetune_seed456_lam0.1_gold_lae_bert_finetune_s456.pt",
+        "n_samples": 120
+      }
+    }
+  },
+  "aggregated": {
+    "rf_probability": {
+      "accuracy": {
+        "mean": 0.0306,
+        "std": 0.0104,
+        "values": [
+          0.0333,
+          0.0417,
+          0.0167
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.0019,
+        "std": 0.0006,
+        "values": [
+          0.0021,
+          0.0026,
+          0.0011
+        ]
+      },
+      "positive_macro_f1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "negative_f1": {
+        "mean": 0.2048,
+        "std": 0.0679,
+        "values": [
+          0.2222,
+          0.2778,
+          0.1143
+        ]
+      },
+      "top5_accuracy": {
+        "mean": 0.1778,
+        "std": 0.0283,
+        "values": [
+          0.15,
+          0.2167,
+          0.1667
+        ]
+      }
+    },
+    "hybrid_or": {
+      "accuracy": {
+        "mean": 0.0416,
+        "std": 0.0118,
+        "values": [
+          0.0333,
+          0.0583,
+          0.0333
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.0024,
+        "std": 0.0005,
+        "values": [
+          0.0021,
+          0.0032,
+          0.002
+        ]
+      },
+      "positive_macro_f1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "negative_f1": {
+        "mean": 0.2609,
+        "std": 0.0632,
+        "values": [
+          0.2222,
+          0.35,
+          0.2105
+        ]
+      },
+      "top5_accuracy": {
+        "mean": 0.175,
+        "std": 0.018,
+        "values": [
+          0.1917,
+          0.1833,
+          0.15
+        ]
+      }
+    },
+    "neurosymbolic": {
+      "accuracy": {
+        "mean": 0.0556,
+        "std": 0.0104,
+        "values": [
+          0.0417,
+          0.0667,
+          0.0583
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.0032,
+        "std": 0.0005,
+        "values": [
+          0.0025,
+          0.0038,
+          0.0033
+        ]
+      },
+      "positive_macro_f1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "negative_f1": {
+        "mean": 0.3373,
+        "std": 0.053,
+        "values": [
+          0.2703,
+          0.4,
+          0.3415
+        ]
+      },
+      "top5_accuracy": {
+        "mean": 0.1861,
+        "std": 0.0208,
+        "values": [
+          0.1917,
+          0.2083,
+          0.1583
+        ]
+      }
+    },
+    "bert_finetune": {
+      "accuracy": {
+        "mean": 0.0417,
+        "std": 0.0068,
+        "values": [
+          0.0333,
+          0.05,
+          0.0417
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.0025,
+        "std": 0.0003,
+        "values": [
+          0.0021,
+          0.0029,
+          0.0024
+        ]
+      },
+      "positive_macro_f1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "negative_f1": {
+        "mean": 0.2648,
+        "std": 0.0387,
+        "values": [
+          0.2222,
+          0.3158,
+          0.2564
+        ]
+      },
+      "top5_accuracy": {
+        "mean": 0.1639,
+        "std": 0.0258,
+        "values": [
+          0.15,
+          0.2,
+          0.1417
+        ]
+      }
+    }
+  },
+  "_provenance": {
+    "train_file": "code/data/lae_train_clean.csv",
+    "train_rows": 1675,
+    "train_sha256_16": "0a51298c3de6185f",
+    "test_file": "code/data/lae_test_gold.csv",
+    "test_rows": 120,
+    "test_sha256_16": "314d5c06ca2f6351",
+    "weaklabel_params": "relaxed tau0.60/delta0.02",
+    "leakage_audit": "0 overlap (gold texts removed from pool before weak-labeling)"
+  }
+}
