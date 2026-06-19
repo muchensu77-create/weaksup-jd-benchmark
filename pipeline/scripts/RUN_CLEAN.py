@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """跨平台干净重训：在【已剔除gold、零泄漏】的训练集上 train+eval。
-先自检 overlap=0，再跑 ICV(relaxed/conservative)+LAE，结果存 *_clean.json。"""
+先自检 overlap=0，再跑 ICV(relaxed + conservative)，结果存 *_clean.json。"""
 import subprocess, sys, os
 from pathlib import Path
 import pandas as pd
