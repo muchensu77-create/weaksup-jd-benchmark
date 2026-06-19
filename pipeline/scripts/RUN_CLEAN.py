@@ -16,7 +16,6 @@ env = dict(os.environ, GZROOT=str(ROOT), TOKENIZERS_PARALLELISM="false", PYTORCH
 print("== overlap 自检 ==")
 ok = True
 for tr, gd in [("icv_train_relaxed_clean.csv","icv_test_gold.csv"),
-               ("icv_train_conservative_clean.csv","icv_test_gold.csv"),
                ("icv_train_conservative_clean.csv","icv_test_gold.csv")]:
     t = set(pd.read_csv(D/tr)["text"].astype(str)); g = set(pd.read_csv(D/gd)["text"].astype(str))
     ov = len(t & g); print(f"  {tr}: {len(t)} rows, overlap={ov}")
@@ -35,4 +34,4 @@ for i, (dom, tr, te, out) in enumerate(JOBS, 1):
                         "--test", str(D/te), "--out", str(EXP/out)], env=env)
     if r.returncode != 0:
         sys.exit(f"步骤 {i} 失败")
-print("\n==== 全部完成 ====  结果: results_gold_icv_clean.json / _cons_clean / lae_clean")
+print("\n==== 全部完成 ====  结果: results_gold_icv_clean.json / results_gold_icv_cons_clean.json")
