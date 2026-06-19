@@ -9,7 +9,7 @@ zero-overlap audit).
 ## Layout
 - `code/` — pipeline (BERT-wwm classifier, weak-label rules, evaluation).
 - `code/data/` — prototypes (`jd.csv`, `lae_prototypes.csv`), rules, **gold test sets**
-  (`icv_test_gold.csv` 247, `lae_test_gold.csv` 120), **clean train sets**
+  (`icv_test_gold.csv` (247 rows)), **clean train sets**
   (`icv_train_{conservative,relaxed}_clean.csv`, `lae_train_clean.csv`), and the unlabeled
   pools (`mongodb_data.csv`, `lae_raw.csv`).
 - `pipeline/scripts/` — weak-label generation (`gen_weak_labels.py`, with `exclude_gold`

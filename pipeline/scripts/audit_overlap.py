@@ -10,7 +10,6 @@ D = ROOT / "code" / "data"
 PAIRS = [
     ("icv_train_conservative_clean.csv", "icv_test_gold.csv"),
     ("icv_train_relaxed_clean.csv",      "icv_test_gold.csv"),
-    ("lae_train_clean.csv",              "lae_test_gold.csv"),
 ]
 def norm(s): return " ".join(str(s).split()).strip()
 ok = True

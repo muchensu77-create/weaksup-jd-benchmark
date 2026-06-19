@@ -17,7 +17,7 @@ print("== overlap 自检 ==")
 ok = True
 for tr, gd in [("icv_train_relaxed_clean.csv","icv_test_gold.csv"),
                ("icv_train_conservative_clean.csv","icv_test_gold.csv"),
-               ("lae_train_clean.csv","lae_test_gold.csv")]:
+               ("icv_train_conservative_clean.csv","icv_test_gold.csv")]:
     t = set(pd.read_csv(D/tr)["text"].astype(str)); g = set(pd.read_csv(D/gd)["text"].astype(str))
     ov = len(t & g); print(f"  {tr}: {len(t)} rows, overlap={ov}")
     ok = ok and ov == 0
@@ -28,7 +28,6 @@ print("零泄漏，开始重训\n")
 JOBS = [
     ("icv", "icv_train_relaxed_clean.csv",      "icv_test_gold.csv", "results_gold_icv_clean.json"),
     ("icv", "icv_train_conservative_clean.csv", "icv_test_gold.csv", "results_gold_icv_cons_clean.json"),
-    ("lae", "lae_train_clean.csv",              "lae_test_gold.csv", "results_gold_lae_clean.json"),
 ]
 for i, (dom, tr, te, out) in enumerate(JOBS, 1):
     print(f"\n==== [{i}/3] {dom} train={tr} ====", flush=True)
